@@ -51,8 +51,8 @@ var grade_mapping_array=[
   "系所","高中","大學"
 ]
 
-var first_answer_array = ["6 bar","8 bar","9 bar"];
-var second_answer_array = ["吧檯","拖延","骨幹"];
+var first_answer_array = ["喜歡","不喜歡"];
+var second_answer_array = ["吧檯","拖延","店家"];
 var third_answer_array = ["有獎?徵答?","咕嚕?蛤?","GO?GO?"];
 
 var user_name;
@@ -180,44 +180,44 @@ function change_page(from,to){
 
 
 function checkfull(callback){
-  var isfull = false;
+  var isnotfull = false;
   checkLoginState(function(flag){
     if(flag){
       if(answer.first_answer == undefined){
         fading(null,5);
-        isfull = true;
+        isnotfull = true;
       }else if(answer.second_answer == undefined){
         fading(null,6);
-        isfull = true;
+        isnotfull = true;
       }else if(answer.third_answer == undefined){
         fading(null,7);
-        isfull = true;
+        isnotfull = true;
       }
     }else{
       if(answer.name== undefined){
         fading(null,1);
-        isfull = true;
+        isnotfull = true;
       }else if(answer.fbname == undefined){
         fading(null,2);
-        isfull = true;
+        isnotfull = true;
       }else if(answer.grade == undefined){
         fading(null,3);
-        isfull = true;
+        isnotfull = true;
       }else if(answer.message == undefined){
         fading(null,4);
-        isfull = true;
+        isnotfull = true;
       }else if(answer.first_answer == undefined){
         fading(null,5);
-        isfull = true;
+        isnotfull = true;
       }else if(answer.second_answer == undefined){
         fading(null,6);
-        isfull = true;
+        isnotfull = true;
       }else if(answer.third_answer == undefined){
         fading(null,7);
-        isfull = true;
+        isnotfull = true;
       }
     }
-    callback(isfull);
+    callback(isnotfull);
   })
 }
 
