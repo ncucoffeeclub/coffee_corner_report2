@@ -165,7 +165,7 @@ function change_page(from,to){
     case 6:
       if($('input[name="gender2"]:checked').val() == 3){
         if( !$('#second_question_other').val() ) {
-          $('#second_question_other').addClass('second_question_other');
+          $('#second_question_other').addClass('warning');
           document.getElementById("second_question_other").placeholder = "不可為空";
           return;
         }else{
@@ -235,7 +235,7 @@ function checkfull(callback){
 function submit(){
   if($('input[name="gender3"]:checked').val() == 2){
     if( !$('#third_question_other').val() ) {
-      $('#_question_other').addClass('third_question_other');
+      $('#third_question_other').addClass('warning');
       document.getElementById("third_question_other").placeholder = "不可為空";
       return;
     }else{
