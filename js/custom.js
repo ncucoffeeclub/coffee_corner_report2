@@ -233,7 +233,7 @@ function checkfull(callback){
 }
 
 function submit(){
-  if($('input[name="gender3"]:checked').val() == 3){
+  if($('input[name="gender3"]:checked').val() == 2){
     if( !$('#third_question_other').val() ) {
       $('#_question_other').addClass('third_question_other');
       document.getElementById("third_question_other").placeholder = "不可為空";
