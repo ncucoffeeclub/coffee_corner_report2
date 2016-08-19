@@ -53,7 +53,7 @@ var grade_mapping_array=[
 
 var first_answer_array = ["喜歡","不喜歡"];
 var second_answer_array = ["吧檯","拖延","店家"];
-var third_answer_array = ["有獎?徵答?","咕嚕?蛤?","GO?GO?"];
+var third_answer_array = ["什麼是好咖啡","如何煮出好喝的咖啡"];
 
 var user_name;
 var grade;
@@ -163,7 +163,18 @@ function change_page(from,to){
       fading(from,to);
       break;
     case 6:
-      answer['second_answer'] = second_answer_array[$('input[name="gender2"]:checked').val()];
+      if($('input[name="gender2"]:checked').val() == 3){
+        if( !$('#second_question_other').val() ) {
+          $('#second_question_other').addClass('second_question_other');
+          document.getElementById("second_question_other").placeholder = "不可為空";
+          return;
+        }else{
+          answer['second_answer'] = $('#second_question_other').val();
+        }
+      }else{
+        answer['second_answer'] = second_answer_array[$('input[name="gender2"]:checked').val()];
+      }
+      
       fading(from,to);
       break;
     // case 7:
@@ -222,8 +233,18 @@ function checkfull(callback){
 }
 
 function submit(){
-
-  answer['third_answer'] = third_answer_array[$('input[name="gender3"]:checked').val()];
+  if($('input[name="gender3"]:checked').val() == 3){
+    if( !$('#third_question_other').val() ) {
+      $('#_question_other').addClass('third_question_other');
+      document.getElementById("third_question_other").placeholder = "不可為空";
+      return;
+    }else{
+      answer['third_answer'] = $('#third_question_other').val();
+    }
+  }else{
+    answer['third_answer'] = third_answer_array[$('input[name="gender3"]:checked').val()];
+  }
+  
   $('#'+button_id[now_page]).prop('disabled', true);
   checkfull(function(flag){
     console.log("flag"+flag);
