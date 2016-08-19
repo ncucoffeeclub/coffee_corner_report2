@@ -52,7 +52,7 @@ var grade_mapping_array=[
 ]
 
 var first_answer_array = ["喜歡","不喜歡"];
-var second_answer_array = ["吧檯","拖延","店家"];
+var second_answer_array = ["超商","星巴克","店家"];
 var third_answer_array = ["什麼是好咖啡","如何煮出好喝的咖啡"];
 
 var user_name;
