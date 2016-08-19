@@ -264,7 +264,7 @@ function submit(){
   })
 }
 
-var google_script_url = "https://script.google.com/macros/s/AKfycbzkiet3Bvvr_BC1V7kxFOowBejrDMreD9nI9FKY3mLwx_35Qe0l/exec";
+var google_script_url = "https://script.google.com/macros/s/AKfycbw5UyfZvWKRygloAdqTGb2FqojWgFyQRnYouGCPYSR2IQO4QZ7P/exec";
 
 function Sendresult(callback){
 
